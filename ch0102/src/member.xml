@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+                             "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<!-- 
+ -주입되는 데이터가 기본형이 아닌 참조형인 경우 ref 속성으로 설정한다.
+ -
+ -->
+
+<beans>
+   <bean id="memberService" class="comsam.spring02.DI03_member_ref.MemberServiceImpl">
+  	 <property name="memberDAO" ref="memberDAO" /><!-- 주입되는 데이터가 기본형이 아닌 참조형인 경우 ref속으로 설정한다.  -->
+   </bean>
+   
+   <bean id ="memberDAO" class="comsam.spring02.DI03_member_ref.MemberDAOImpl" />
+  <!--id가  memberDAO인 빈을 MemberDAOImpl을 이용해 만든다  -->
+  <!--MemberServiceImpl 클래스를 이용해 id 가 memberService인 빈을 만든다. 빈을 만들면서 setter 주입 방식으로 id가  memberDAO인 
+  빈을  자신의 속성에 주입한다.  -->
+</beans>                             
