@@ -24,6 +24,4 @@ public class CoffeeTest {
 	
 	}
 	//
-	
-	//version 3
 }
