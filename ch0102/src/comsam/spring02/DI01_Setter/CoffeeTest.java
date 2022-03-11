@@ -23,5 +23,4 @@ public class CoffeeTest {
 	    order.order();
 	
 	}
-	//
 }
